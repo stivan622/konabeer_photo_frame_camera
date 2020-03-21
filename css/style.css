@@ -18,9 +18,8 @@ body {
 }
 .content {
   width: 100%;
-  max-width: 520px;
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 100px;
 }
 
 .main {
@@ -29,16 +28,14 @@ body {
 }
 
 .video {
-  max-width: 100%;
-  /* object-fit: fill; */
-  display: block;
+  width: 100%;
+  display: none;
   margin: 0 auto;
 }
 
 .overlay {
-  max-width: 100%;
+  width: 100%;
   display: block;
-  position: absolute;
   margin: auto;
   top: 0;
   right: 0;
@@ -57,11 +54,12 @@ body {
   width: 100px;
   display: block;
   padding: 12px;
-  border-radius: 2px;
-  font-weight: bold;
-  margin: 0 auto 0;
-  font-size: 16px;
-  color: #000;
+  margin: 40px auto 40px;
+  left: calc(50% - 40px);
+  top: calc(50% - 40px);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
 }
 
 .gallary {
