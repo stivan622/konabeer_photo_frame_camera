@@ -66,7 +66,6 @@ function displaySnapshot() {
 function drawLoop() {
   context.clearRect(0, 0, canvas.width, canvas.height);
   context.drawImage(video, 0, 0, canvas.width, canvas.height);
-  imageData = context.getImageData(0, 0, canvas.width, canvas.height);
   displayPhotoFrame()
   requestAnimationFrame(drawLoop);
 }

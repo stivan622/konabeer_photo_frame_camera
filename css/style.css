@@ -18,8 +18,9 @@ body {
 }
 .content {
   width: 100%;
+  max-width: 520px;
   margin: 0 auto;
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
 .main {
@@ -28,14 +29,16 @@ body {
 }
 
 .video {
-  width: 100%;
-  display: none;
+  max-width: 100%;
+  /* object-fit: fill; */
+  display: block;
   margin: 0 auto;
 }
 
 .overlay {
-  width: 100%;
+  max-width: 100%;
   display: block;
+  position: absolute;
   margin: auto;
   top: 0;
   right: 0;
