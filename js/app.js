@@ -3,15 +3,9 @@ var canvas = document.getElementById('overlay');
 var context = canvas.getContext('2d');
 var button = document.getElementById('button');
 var gallary = document.getElementById('gallary');
-var sadText = document.getElementById('sadText');
-var happyText = document.getElementById('happyText');
 var isTracking = false;
-var isHappy = false;
-var isSad = false;
 var isPortrait = true;
-var happyLevel;
 var imageData;
-var mosaicSize;
 var constraints = {
   audio: false,
   video: {
