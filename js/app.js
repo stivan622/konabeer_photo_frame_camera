@@ -9,7 +9,7 @@ var imageData;
 var constraints = {
   audio: false,
   video: {
-    facingMode: 'environment'
+    facingMode: 'user'
   }
 };
 var frameImage = new Image;
