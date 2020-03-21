@@ -89,7 +89,7 @@ function makeRosesBloom(level) {
     } else {
       frameImage.src = landscapeImagePath[0];
     }
-    context.drawImage(roseImage, 0, 0, canvas.width, canvas.height);
+    context.drawImage(frameImage, 0, 0, canvas.width, canvas.height);
   }
 }
 
