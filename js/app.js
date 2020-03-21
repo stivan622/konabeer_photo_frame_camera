@@ -16,17 +16,6 @@ var constraints = {
 
 var frameImage = new Image;
 
-var portraitImagePath = [
-  './img/roses_portrait_1.png',
-  './img/roses_portrait_2.png',
-  './img/roses_portrait_3.png'
-];
-var landscapeImagePath = [
-  './img/roses_landscape_1.png',
-  './img/roses_landscape_2.png',
-  './img/roses_landscape_3.png'
-];
-
 function successFunc (stream) {
   if ('srcObject' in video) {
     video.srcObject = stream;
@@ -77,20 +66,18 @@ function displaySnapshot() {
 function drawLoop() {
   context.clearRect(0, 0, canvas.width, canvas.height);
   context.drawImage(video, 0, 0, canvas.width, canvas.height);
-  imageData = context.getImageData(0, 0, canvas.width, canvas.height);
-  makeRosesBloom(3)
+  // imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+  displayPhotoFrame()
   requestAnimationFrame(drawLoop);
 }
 
-function makeRosesBloom(level) {
-  for (i = 0; i < level; i++) {
-    if (isPortrait) {
-      frameImage.src = portraitImagePath[0];
-    } else {
-      frameImage.src = landscapeImagePath[0];
-    }
-    context.drawImage(frameImage, 0, 0, canvas.width, canvas.height);
+function displayPhotoFrame() {
+  if (isPortrait) {
+    frameImage.src = './img/frame_portrait.png';
+  } else {
+    frameImage.src = './img/frame_landscape.png';
   }
+  context.drawImage(frameImage, 0, 0, canvas.width, canvas.height);
 }
 
 if (navigator.mediaDevices) {
